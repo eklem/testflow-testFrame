@@ -1,10 +1,25 @@
-// get viewport size
+// ## get viewport size
 let viewport = {
   height: window.innerHeight,
   width: window.innerWidth,
 }
 
-// resize iframe
+// ## function draw iframe
+const drawIframe = function(testURL, elementID) {
+  // create iframe 
+  let iframe = document.createElement('iframe')
+  iframe.id = elementID
+  iframe.src = testURL
+
+  // append to 
+  document.body.appendChild(iframe)
+  console.log('testURL: ' + testURL + ' ' + iframe.id + ' ' + iframe.src )
+
+  // call resize to resize iframe if necessary 
+  reSize(800, elementID)
+}
+
+// ## function resize iframe
 const reSize = function (maxHeight, elementID) {
   let height = window.innerHeight
   let width = window.innerWidth
@@ -23,12 +38,16 @@ const reSize = function (maxHeight, elementID) {
   console.log('## Iframe   - Height: ' + document.getElementById(elementID).style.height)
 }
 
+
+
+// ## And action:
+
 // event listeners on page loaded
 onload = (event) => {
-  reSize(800, 'testflowPrototype')
-};
+  drawIframe('./index.html', 'testflowPrototype')
+}
 
 // event listeners on viewport resized
 window.onresize = function() {
   reSize(800, 'testflowPrototype')
-};
+}

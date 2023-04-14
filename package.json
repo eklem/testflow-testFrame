@@ -1,0 +1,17 @@
+{
+  "name": "testflow-testframe",
+  "version": "0.0.2",
+  "description": "To get a mobile viewport on a desktop for Testflow usability testing. Just a temporary fix until Testflow get's an app for testing your prototype.",
+  "main": "testflow.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testflow",
+    "usability",
+    "testing",
+    "mobile"
+  ],
+  "author": "Espen Klem",
+  "license": "MIT"
+}
